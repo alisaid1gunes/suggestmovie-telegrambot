@@ -4,7 +4,9 @@
   "description": "",
   "main": "telegram.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node telegram.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "dependencies": {
     "dotenv": "^9.0.2",
     "node-telegram-bot-api": "^0.53.0"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }
