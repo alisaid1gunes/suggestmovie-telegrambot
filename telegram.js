@@ -41,13 +41,13 @@ bot.on('message', (msg) => {
       const random = Math.floor(Math.random() * 20);
       bot.sendMessage(chatId, films[random]);
       break;
-    case 'beni kim yaptı':
+    case 'seni kim yaptı':
       bot.sendMessage(
         chatId,
         'Beni Ali Said Güneş yaptı. Linekdin: https://www.linkedin.com/in/ali-said-güneş-990834186/'
       );
       break;
-    case 'hani kodların nerde hemen çalayım':
+    case 'kodlar':
       bot.sendMessage(
         chatId,
         'Tabi ki reis senden mi esirgicem işte Github: https://github.com/alisaid1gunes/suggestmovie-telegrambot'
