@@ -2,6 +2,11 @@ const telegramBot = require('node-telegram-bot-api');
 
 require('dotenv').config();
 
+const port = process.env.PORT || '8000';
+const hostname = process.env.YOUR_HOST || '0.0.0.0';
+const express = require('express');
+const app = express();
+
 const token = process.env.TELEGRAM_TOKEN;
 
 const bot = new telegramBot(token, { polling: true });
@@ -51,4 +56,17 @@ bot.on('message', (msg) => {
   }
 
   console.log(JSON.stringify(msg));
+});
+
+
+  
+
+app.get("/", (req, res) => {
+  console.log("Responding to root route")
+  res.send("Hello from ROOOOOT")
+})
+
+
+app.listen(port, hostname,() => {
+  console.log('Server çalışıyor' );
 });
